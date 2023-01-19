@@ -64,17 +64,20 @@
             "restartPolicy": "always",
             "settings": {
               "image": "${MODULES.BackendModule}",
-              "createOptions": {}
-            }
-          },
-          "SimulatedTemperatureSensor": {
-            "version": "1.0",
-            "type": "docker",
-            "status": "running",
-            "restartPolicy": "always",
-            "settings": {
-              "image": "mcr.microsoft.com/azureiotedge-simulated-temperature-sensor:1.4",
-              "createOptions": {}
+              "createOptions": {
+                "ExposedPorts": {
+                  "8000/tcp": {}
+                },
+                "HostConfig": {
+                  "PortBindings": {
+                    "8000/tcp": [
+                      {
+                        "HostPort": "8000"
+                      }
+                    ]
+                  }
+                }
+              }
             }
           }
         }
@@ -83,10 +86,7 @@
     "$edgeHub": {
       "properties.desired": {
         "schemaVersion": "1.1",
-        "routes": {
-          "BackendModuleToIoTHub": "FROM /messages/modules/BackendModule/outputs/* INTO $upstream",
-          "sensorToBackendModule": "FROM /messages/modules/SimulatedTemperatureSensor/outputs/temperatureOutput INTO BrokeredEndpoint(\"/modules/BackendModule/inputs/input1\")"
-        },
+        "routes": {},
         "storeAndForwardConfiguration": {
           "timeToLiveSecs": 7200
         }

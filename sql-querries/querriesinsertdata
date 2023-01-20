@@ -1,0 +1,13 @@
+INSERT INTO [dbo].[Rooms] (ID,Name) VALUES (NEWID(),'Room 1')
+INSERT INTO [dbo].[Rooms] (ID,Name) VALUES (NEWID(),'Room 2')
+
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'df700779-f17e-40ff-94b2-9a5fdc864f5b',0,65,200)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'df700779-f17e-40ff-94b2-9a5fdc864f5b',10,65,250)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'df700779-f17e-40ff-94b2-9a5fdc864f5b',20,50,250)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'df700779-f17e-40ff-94b2-9a5fdc864f5b',25,55,150)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'df700779-f17e-40ff-94b2-9a5fdc864f5b',30,50,300)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'167a932c-8794-4bee-a435-29518ac8d842',20,65,250)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'167a932c-8794-4bee-a435-29518ac8d842',10,50,350)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'167a932c-8794-4bee-a435-29518ac8d842',20,50,300)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'167a932c-8794-4bee-a435-29518ac8d842',15,55,200)
+INSERT INTO [dbo].[Metrics] (ID,IDRoom,Temperature,Humidity,CO2) VALUES (NEWID(),'167a932c-8794-4bee-a435-29518ac8d842',20,60,250)

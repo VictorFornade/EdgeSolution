@@ -1,0 +1,12 @@
+CREATE TABLE Rooms (
+    ID UNIQUEIDENTIFIER,
+    Name varchar(255)
+);
+
+CREATE TABLE Metrics (
+    ID UNIQUEIDENTIFIER,
+    IDRoom UNIQUEIDENTIFIER,
+    Temperature  Numeric(10, 2) DEFAULT 0,
+    Humidity Numeric(10, 2) DEFAULT 0,
+    CO2  Numeric(10, 2) DEFAULT 0
+);
